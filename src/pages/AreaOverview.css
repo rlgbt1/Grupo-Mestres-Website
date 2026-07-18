@@ -1,0 +1,132 @@
+.area-overview-intro {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.area-overview-media img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.emd-logo-panel {
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  background:
+    linear-gradient(135deg, rgba(198, 161, 91, 0.12), transparent 40%),
+    var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: 0 18px 38px -32px rgba(10, 24, 48, 0.42);
+}
+
+.emd-logo-panel img {
+  width: min(100%, 360px);
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.area-overview-media-wide img {
+  aspect-ratio: 21 / 9;
+}
+
+.area-overview-body h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: var(--space-2) 0 var(--space-3);
+}
+
+.area-overview-body p {
+  color: var(--muted);
+  max-width: 56ch;
+  margin-bottom: var(--space-4);
+}
+
+.area-overview-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--petrol-700);
+  font-size: 14.5px;
+}
+
+.rep-corp-icon {
+  color: var(--petrol-700);
+  margin-bottom: var(--space-2);
+}
+
+.projectos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.projecto-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold-500);
+  border-radius: var(--radius-sm);
+  padding: var(--space-5);
+}
+
+.projecto-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-2);
+}
+
+.projecto-card p {
+  font-size: 14.5px;
+  color: var(--muted);
+}
+
+.frentes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.frentes-grid-single {
+  grid-template-columns: 1fr;
+  max-width: 560px;
+}
+
+.frente-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.frente-icon {
+  color: var(--petrol-700);
+  margin-bottom: var(--space-3);
+}
+
+.frente-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: var(--space-2);
+}
+
+.frente-card p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .area-overview-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .projectos-grid,
+  .frentes-grid {
+    grid-template-columns: 1fr;
+  }
+}

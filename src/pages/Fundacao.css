@@ -1,0 +1,240 @@
+.fundacao-intro {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.fundacao-intro-media img {
+  width: 100%;
+}
+
+.fundacao-intro-body h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: var(--space-2) 0 var(--space-3);
+}
+
+.fundacao-intro-body p {
+  color: var(--muted);
+  max-width: 58ch;
+  margin-bottom: var(--space-3);
+}
+
+.fundacao-collection-section {
+  padding-top: 0;
+}
+
+.fundacao-collection {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.fundacao-collection-copy {
+  border-left: 3px solid var(--gold-500);
+  padding-left: var(--space-5);
+}
+
+.fundacao-collection-copy h2 {
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+  margin: var(--space-2) 0 var(--space-3);
+}
+
+.fundacao-collection-copy p {
+  color: var(--muted);
+  max-width: 42ch;
+}
+
+.fundacao-collection-gallery {
+  position: relative;
+  min-height: 470px;
+}
+
+.fundacao-collection-gallery::before {
+  content: '';
+  position: absolute;
+  inset: 15% 8% 10% 18%;
+  border: 1px solid rgba(198, 161, 91, 0.28);
+  border-radius: var(--radius-md);
+  transform: rotate(-2deg);
+}
+
+.collection-photo {
+  position: absolute;
+  margin: 0;
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: 0 26px 54px -34px rgba(10, 24, 48, 0.5);
+}
+
+.collection-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collection-photo-large {
+  left: 0;
+  bottom: 0;
+  width: 70%;
+  height: 78%;
+}
+
+.collection-photo-small {
+  right: 0;
+  top: 0;
+  width: 48%;
+  height: 48%;
+}
+
+.pilares-fundacao-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+
+.pilar-fundacao-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.pilar-fundacao-icon {
+  color: var(--petrol-700);
+  margin-bottom: var(--space-3);
+}
+
+.pilar-fundacao-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: var(--space-2);
+}
+
+.pilar-fundacao-card p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.iniciativas-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.iniciativa-card {
+  display: flex;
+  gap: var(--space-4);
+  background: var(--paper-dim);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.iniciativa-icon {
+  color: var(--petrol-700);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.iniciativa-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-2);
+}
+
+.iniciativa-card p {
+  font-size: 14.5px;
+  color: var(--muted);
+}
+
+.balumuka-video {
+  max-width: 560px;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}
+
+.balumuka-video iframe {
+  width: 100%;
+  display: block;
+  background: var(--paper-dim);
+}
+
+.balumuka-fallback {
+  justify-content: center;
+  margin-top: var(--space-3);
+  color: var(--petrol-700);
+}
+
+.fundacao-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 560px;
+  margin: var(--space-5) auto 0;
+}
+
+.fundacao-links .link-arrow {
+  color: var(--petrol-700);
+}
+
+@media (max-width: 900px) {
+  .fundacao-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .fundacao-intro-media {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .fundacao-collection {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .fundacao-collection-copy {
+    padding-left: var(--space-4);
+  }
+
+  .fundacao-collection-gallery {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .fundacao-collection-gallery::before {
+    display: none;
+  }
+
+  .collection-photo {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .collection-photo-large,
+  .collection-photo-small {
+    inset: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .collection-photo img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .pilares-fundacao-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .pilares-fundacao-grid {
+    grid-template-columns: 1fr;
+  }
+}

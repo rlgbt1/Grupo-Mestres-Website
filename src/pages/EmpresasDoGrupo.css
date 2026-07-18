@@ -1,0 +1,153 @@
+.mmr-intro {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.mmr-intro-media img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.mmr-logo {
+  width: auto;
+  height: 88px;
+  object-fit: contain;
+  margin-bottom: var(--space-5);
+}
+
+.mmr-intro-body h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: var(--space-2) 0 var(--space-3);
+}
+
+.mmr-intro-body p {
+  color: var(--muted);
+  max-width: 56ch;
+}
+
+.mmr-clarify {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.recursos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+
+.recurso-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.recurso-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: var(--space-3);
+}
+
+.recurso-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: var(--space-2);
+}
+
+.recurso-card p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.minerais-criticos-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+  background: var(--petrol-950);
+  border-left: 3px solid var(--gold-500);
+  border-radius: var(--radius-sm);
+  padding: var(--space-5);
+}
+
+.minerais-criticos-icon {
+  color: var(--gold-400);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.minerais-criticos-card h3 {
+  font-size: 1.1rem;
+  color: var(--paper);
+  margin-bottom: var(--space-2);
+}
+
+.minerais-criticos-card p {
+  font-size: 14.5px;
+  color: var(--muted-on-dark);
+}
+
+.localizacoes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 560px;
+  gap: var(--space-5);
+}
+
+.localizacao-card {
+  position: relative;
+  background: var(--petrol-950);
+  color: var(--paper);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+}
+
+.localizacao-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--petrol-950);
+  background: var(--gold-500);
+  padding: 4px 10px;
+  border-radius: 100px;
+  margin-bottom: var(--space-3);
+}
+
+.localizacao-icon {
+  color: var(--gold-500);
+  margin-bottom: var(--space-3);
+}
+
+.localizacao-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-2);
+  color: var(--paper);
+}
+
+.localizacao-card p {
+  color: var(--muted-on-dark);
+  font-size: 14.5px;
+}
+
+@media (max-width: 900px) {
+  .mmr-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .recursos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .localizacoes-grid {
+    grid-template-columns: 1fr;
+  }
+}
