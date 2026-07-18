@@ -81,7 +81,6 @@ export default function EmpresasDoGrupo() {
             <div className="mmr-brand-mark">
               <img src={mmrLogo} alt="Mestres Mineral Resources, Lda." />
             </div>
-            <span>{t.company}</span>
           </Reveal>
           <Reveal as="div" delay={100} className="mmr-intro-body">
             <span className="eyebrow eyebrow-dark">{t.company}</span>
