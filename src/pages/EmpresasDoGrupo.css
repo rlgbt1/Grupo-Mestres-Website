@@ -35,15 +35,17 @@
 .mmr-brand-mark {
   position: relative;
   z-index: 1;
-  width: min(58%, 260px);
+  width: min(62%, 270px);
+  aspect-ratio: 1.15 / 1;
   display: grid;
   place-items: center;
 }
 
 .mmr-brand-mark img {
-  width: 100%;
-  height: 100%;
+  width: min(100%, 270px);
+  height: auto;
   object-fit: contain;
+  transform: translate(-2%, -1%);
 }
 
 .mmr-intro-body h2 {
@@ -177,7 +179,11 @@
   }
 
   .mmr-brand-mark {
-    width: min(74vw, 250px);
+    width: min(76vw, 270px);
+  }
+
+  .mmr-brand-mark img {
+    transform: translate(-1.5%, -1%);
   }
 
   .recursos-grid {
