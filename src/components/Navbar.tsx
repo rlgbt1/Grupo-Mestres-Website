@@ -73,7 +73,6 @@ export default function Navbar() {
           <img src={logo} alt="Grupo Mestres & Serviços" />
         </Link>
 
-        <div className="navbar-right">
         <nav className={`navbar-nav ${open ? 'is-open' : ''}`}>
           <ul className="navbar-list">
             <li><NavLink to="/" end className="navbar-link">{t.inicio}</NavLink></li>
@@ -114,6 +113,7 @@ export default function Navbar() {
           </ul>
         </nav>
 
+        <div className="navbar-right">
         <div className="navbar-lang" ref={langRef}>
           <button
             type="button"

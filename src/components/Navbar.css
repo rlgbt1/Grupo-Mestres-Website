@@ -8,6 +8,10 @@
   backdrop-filter: blur(14px);
 }
 
+.navbar .container {
+  position: relative;
+}
+
 .navbar-inner {
   display: flex;
   align-items: center;
@@ -240,14 +244,17 @@
   }
 
   .navbar-nav {
-    position: fixed;
-    top: 86px;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    bottom: 0;
     z-index: 45;
-    width: 100vw;
+    width: 100%;
+    height: calc(100dvh - 86px);
+    min-height: 320px;
     background: var(--petrol-950);
+    border-top: 1px solid rgba(255, 255, 255, 0.11);
+    box-shadow: 0 28px 48px -30px rgba(0, 0, 0, 0.72);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -328,6 +335,6 @@
   }
 
   .navbar-nav {
-    top: 78px;
+    height: calc(100dvh - 78px);
   }
 }
