@@ -3,7 +3,6 @@ import { Mountains, ArrowRight, Atom } from '@phosphor-icons/react'
 import PageHero from '../components/PageHero'
 import Reveal from '../components/Reveal'
 import { useLanguage } from '../i18n/LanguageContext'
-import mining from '../assets/images/mining.jpg'
 import mmrLogo from '../assets/logos/mestres-mineral-r-logo.png'
 import goldMineIcon from '../assets/icons/gold-mine.svg'
 import diamondIcon from '../assets/icons/diamond.svg'
@@ -16,7 +15,6 @@ const copy = {
     eyebrow: 'Empresas do Grupo',
     title: 'Mestres Mineral Resources',
     intro: 'A empresa de mineração do Grupo Mestres, dedicada à aquisição de concessões e à exploração responsável de recursos minerais no leste de Angola.',
-    imageAlt: 'Operação de mineração da Mestres Mineral Resources',
     company: 'Empresa Constituída',
     heading: 'Uma Identidade Própria dentro do Grupo',
     body: 'A Mestres Mineral Resources é, a par da Fundação Isaías Trindade, uma das duas entidades já constituídas do Grupo Mestres & Serviços. Actua na aquisição de concessões mineiras e na exploração de ouro, diamantes, calcário e quartzo, com operações previstas para o leste de Angola.',
@@ -43,7 +41,6 @@ const copy = {
     eyebrow: 'Group Companies',
     title: 'Mestres Mineral Resources',
     intro: 'Grupo Mestres’ mining company, dedicated to acquiring concessions and responsibly exploring mineral resources in eastern Angola.',
-    imageAlt: 'Mestres Mineral Resources mining operation',
     company: 'Incorporated Company',
     heading: 'A Distinct Identity within the Group',
     body: 'Mestres Mineral Resources is, alongside the Isaías Trindade Foundation, one of the two already incorporated entities of Grupo Mestres & Serviços. It operates in the acquisition of mining concessions and the exploration of gold, diamonds, limestone and quartz, with operations planned for eastern Angola.',
@@ -80,11 +77,13 @@ export default function EmpresasDoGrupo() {
 
       <section className="section">
         <div className="container mmr-intro">
-          <Reveal as="div" className="mmr-intro-media">
-            <img src={mining} alt={t.imageAlt} />
+          <Reveal as="div" className="mmr-brand-panel">
+            <div className="mmr-brand-mark">
+              <img src={mmrLogo} alt="Mestres Mineral Resources, Lda." />
+            </div>
+            <span>{t.company}</span>
           </Reveal>
           <Reveal as="div" delay={100} className="mmr-intro-body">
-            <img src={mmrLogo} alt="Mestres Mineral Resources, Lda." className="mmr-logo" />
             <span className="eyebrow eyebrow-dark">{t.company}</span>
             <h2>{t.heading}</h2>
             <p>{t.body}</p>
