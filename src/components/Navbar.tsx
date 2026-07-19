@@ -17,6 +17,7 @@ const areasNegocio = [
 
 const labels = {
   pt: {
+    mainNav: 'Navegação principal',
     inicio: 'Início',
     sobreNos: 'Sobre Nós',
     empresas: 'Empresas do Grupo',
@@ -27,6 +28,7 @@ const labels = {
     contactos: 'Contactos',
   },
   en: {
+    mainNav: 'Main navigation',
     inicio: 'Home',
     sobreNos: 'About Us',
     empresas: 'Group Companies',
@@ -73,7 +75,7 @@ export default function Navbar() {
           <img src={logo} alt="Grupo Mestres & Serviços" />
         </Link>
 
-        <nav className={`navbar-nav ${open ? 'is-open' : ''}`}>
+        <nav className={`navbar-nav ${open ? 'is-open' : ''}`} aria-label={t.mainNav}>
           <ul className="navbar-list">
             <li><NavLink to="/" end className="navbar-link">{t.inicio}</NavLink></li>
             <li><NavLink to="/sobre-nos" className="navbar-link">{t.sobreNos}</NavLink></li>

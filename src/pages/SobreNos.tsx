@@ -4,6 +4,7 @@ import { Buildings, Quotes, ArrowRight, TrendUp, UsersThree, Handshake, Flag } f
 import PageHero from '../components/PageHero'
 import Reveal from '../components/Reveal'
 import { useLanguage } from '../i18n/LanguageContext'
+import { usePageMeta } from '../hooks/usePageMeta'
 import rt from '../assets/images/reinaldo-trindade.jpg'
 import './SobreNos.css'
 
@@ -150,6 +151,7 @@ function useTimelineProgress(itemCount: number) {
 export default function SobreNos() {
   const { lang } = useLanguage()
   const t = copy[lang]
+  usePageMeta(t.heroTitle, t.heroBody)
   const jornada = timeline[lang]
   const {
     activeIndex: timelineActiveIndex,
@@ -169,7 +171,7 @@ export default function SobreNos() {
         <div className="container">
           <Reveal className="fundador-card">
             <div className="fundador-media">
-              <img src={rt} alt="Eng. Reinaldo Trindade, Fundador e Presidente do Grupo Mestres" />
+              <img src={rt} alt="Eng. Reinaldo Trindade, Fundador e Presidente do Grupo Mestres" loading="lazy" />
             </div>
             <div className="fundador-body">
               <Quotes size={32} weight="fill" className="fundador-quote-icon" />
@@ -263,7 +265,7 @@ export default function SobreNos() {
             {t.missao.map((m, i) => {
               const Icon = [TrendUp, UsersThree, Handshake, Flag][i]
               return (
-                <Reveal key={m} delay={i * 80} className="missao-item">
+                <Reveal key={m} delay={i * 80} className="card missao-item">
                   <Icon size={24} weight="light" className="missao-item-icon" />
                   <p>{m}</p>
                 </Reveal>

@@ -3,6 +3,7 @@ import { ArrowRight, Buildings, Target, HandHeart, TrendUp, Quotes } from '@phos
 import Reveal from '../components/Reveal'
 import StatBar from '../components/StatBar'
 import { useLanguage } from '../i18n/LanguageContext'
+import { usePageMeta, SITE_NAME } from '../hooks/usePageMeta'
 import construction from '../assets/images/construction.jpg'
 import engineeringConstruction from '../assets/images/engineering-construction-site.jpg'
 import mining from '../assets/images/mining.jpg'
@@ -109,12 +110,13 @@ const copy = {
 export default function Home() {
   const { lang } = useLanguage()
   const t = copy[lang]
+  usePageMeta(`${SITE_NAME} — ${t.heroTitle}`, t.heroSubtitle, true)
 
   return (
     <>
       <section className="hero">
         <div className="hero-media" aria-hidden="true">
-          <img src={construction} alt="" />
+          <img src={construction} alt="" fetchPriority="high" />
           <div className="hero-media-overlay" />
         </div>
         <div className="container hero-content">
@@ -152,7 +154,7 @@ export default function Home() {
 
           <Reveal className="company-feature">
             <div className="company-feature-media">
-              <img src={mining} alt="Operação de mineração no leste de Angola" />
+              <img src={mining} alt="Operação de mineração no leste de Angola" loading="lazy" />
             </div>
             <div className="company-feature-body">
               <h3>{t.mmrTitle}</h3>
@@ -177,7 +179,7 @@ export default function Home() {
             {t.areas.map((a, i) => (
               <Reveal key={a.to} delay={i * 90} className="area-card">
                 <div className="area-card-media">
-                  <img src={a.image} alt="" />
+                  <img src={a.image} alt="" loading="lazy" />
                 </div>
                 <div className="area-card-body">
                   <span className="area-card-tag">{t.tag}</span>
@@ -197,7 +199,7 @@ export default function Home() {
         <div className="container">
           <Reveal className="founder-teaser bg-dark-texture">
             <div className="founder-teaser-media">
-              <img src={rt} alt={t.fundadorNome} />
+              <img src={rt} alt={t.fundadorNome} loading="lazy" />
             </div>
             <div className="founder-teaser-body">
               <Quotes size={24} weight="fill" className="founder-teaser-quote-icon" />
@@ -235,7 +237,7 @@ export default function Home() {
       <section className="fundacao-band bg-dark-texture">
         <div className="container fundacao-band-inner">
           <Reveal as="div" className="fundacao-band-media">
-            <img src={fundacaoLogo} alt="Fundação Isaías Trindade" />
+            <img src={fundacaoLogo} alt="Fundação Isaías Trindade" loading="lazy" />
           </Reveal>
           <Reveal as="div" delay={100} className="fundacao-band-body">
             <span className="eyebrow">{t.fundacaoEyebrow}</span>

@@ -3,6 +3,7 @@ import { ArrowRight, Handshake } from '@phosphor-icons/react'
 import PageHero from '../components/PageHero'
 import Reveal from '../components/Reveal'
 import { useLanguage } from '../i18n/LanguageContext'
+import { usePageMeta } from '../hooks/usePageMeta'
 import mining from '../assets/images/mining.jpg'
 import './AreaOverview.css'
 
@@ -42,6 +43,7 @@ const copy = {
 export default function Mineracao() {
   const { lang } = useLanguage()
   const t = copy[lang]
+  usePageMeta(t.title, t.intro)
 
   return (
     <>
@@ -52,7 +54,7 @@ export default function Mineracao() {
       <section className="section">
         <div className="container area-overview-intro">
           <Reveal as="div" className="area-overview-media">
-            <img src={mining} alt={t.imageAlt} />
+            <img src={mining} alt={t.imageAlt} loading="lazy" />
           </Reveal>
           <Reveal as="div" delay={100} className="area-overview-body">
             <span className="eyebrow eyebrow-dark">{t.overview}</span>
@@ -73,7 +75,7 @@ export default function Mineracao() {
             <p className="section-lede">{t.lede}</p>
           </Reveal>
           <div className="frentes-grid frentes-grid-single">
-            <Reveal className="frente-card">
+            <Reveal className="card frente-card">
               <Handshake size={26} weight="light" className="frente-icon" />
               <h3>{t.partnerTitle}</h3>
               <p>{t.partnerBody}</p>

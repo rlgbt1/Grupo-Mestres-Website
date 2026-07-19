@@ -3,6 +3,7 @@ import { ArrowRight, Palette } from '@phosphor-icons/react'
 import PageHero from '../components/PageHero'
 import Reveal from '../components/Reveal'
 import { useLanguage } from '../i18n/LanguageContext'
+import { usePageMeta } from '../hooks/usePageMeta'
 import construction from '../assets/images/engineering-construction-site.jpg'
 import oilgas from '../assets/images/oilgas.jpg'
 import mining from '../assets/images/mining.jpg'
@@ -46,6 +47,7 @@ const copy = {
 export default function AreasNegocioIndex() {
   const { lang } = useLanguage()
   const t = copy[lang]
+  usePageMeta(t.title, t.intro)
 
   return (
     <>
@@ -58,7 +60,7 @@ export default function AreasNegocioIndex() {
           {t.areas.map((a, i) => (
             <Reveal key={a.to} delay={i * 90} className="areas-index-item">
               <div className="areas-index-media">
-                <img src={a.image} alt="" />
+                <img src={a.image} alt="" loading="lazy" />
               </div>
               <div className="areas-index-body">
                 <span className="area-card-tag">{a.tag}</span>

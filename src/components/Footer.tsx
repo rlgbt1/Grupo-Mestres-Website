@@ -49,7 +49,7 @@ export default function Footer() {
     <footer className="footer bg-dark-texture">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <img src={logo} alt="Grupo Mestres & Serviços" />
+          <img src={logo} alt="Grupo Mestres & Serviços" loading="lazy" />
           <p>{t.tagline}</p>
           <a
             className="footer-social"
@@ -62,7 +62,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <nav className="footer-col">
+        <nav className="footer-col" aria-label={t.grupo}>
           <h4>{t.grupo}</h4>
           <Link to="/sobre-nos">{t.sobreNos}</Link>
           <Link to="/empresas-do-grupo">{t.empresas}</Link>
@@ -70,7 +70,7 @@ export default function Footer() {
           <Link to="/fundacao-isaias-trindade">{t.fundacao}</Link>
         </nav>
 
-        <nav className="footer-col">
+        <nav className="footer-col" aria-label={t.areas}>
           <h4>{t.areas}</h4>
           <Link to="/areas-de-negocio/engenharia-construcao-civil">{t.engenharia}</Link>
           <Link to="/areas-de-negocio/petroleo-gas">{t.petroleo}</Link>

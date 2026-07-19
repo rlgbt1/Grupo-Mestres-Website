@@ -3,6 +3,7 @@ import { ArrowLeft, Medal, Buildings, HandHeart } from '@phosphor-icons/react'
 import PageHero from '../components/PageHero'
 import Reveal from '../components/Reveal'
 import { useLanguage } from '../i18n/LanguageContext'
+import { usePageMeta } from '../hooks/usePageMeta'
 import rt from '../assets/images/reinaldo-trindade.jpg'
 import './Fundador.css'
 
@@ -56,6 +57,7 @@ const copy = {
 export default function Fundador() {
   const { lang } = useLanguage()
   const t = copy[lang]
+  usePageMeta(t.title, t.subtitle)
 
   return (
     <>
@@ -71,7 +73,7 @@ export default function Fundador() {
 
           <div className="fundador-page-grid">
             <Reveal as="div" className="fundador-page-media">
-              <img src={rt} alt={t.title} />
+              <img src={rt} alt={t.title} loading="lazy" />
             </Reveal>
 
             <Reveal as="div" delay={100} className="fundador-page-body">

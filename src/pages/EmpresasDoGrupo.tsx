@@ -3,6 +3,7 @@ import { Mountains, ArrowRight, Atom } from '@phosphor-icons/react'
 import PageHero from '../components/PageHero'
 import Reveal from '../components/Reveal'
 import { useLanguage } from '../i18n/LanguageContext'
+import { usePageMeta } from '../hooks/usePageMeta'
 import mmrLogo from '../assets/logos/mestres-mineral-r-logo.png'
 import goldMineIcon from '../assets/icons/gold-mine.svg'
 import diamondIcon from '../assets/icons/diamond.svg'
@@ -68,6 +69,7 @@ const copy = {
 export default function EmpresasDoGrupo() {
   const { lang } = useLanguage()
   const t = copy[lang]
+  usePageMeta(t.title, t.intro)
 
   return (
     <>
@@ -79,7 +81,7 @@ export default function EmpresasDoGrupo() {
         <div className="container mmr-intro">
           <Reveal as="div" className="mmr-brand-panel">
             <div className="mmr-brand-mark">
-              <img src={mmrLogo} alt="Mestres Mineral Resources, Lda." />
+              <img src={mmrLogo} alt="Mestres Mineral Resources, Lda." loading="lazy" />
             </div>
           </Reveal>
           <Reveal as="div" delay={100} className="mmr-intro-body">
@@ -99,8 +101,8 @@ export default function EmpresasDoGrupo() {
           </Reveal>
           <div className="recursos-grid">
             {t.resourcesItems.map((r, i) => (
-              <Reveal key={r.title} delay={i * 80} className="recurso-card">
-                <img src={r.icon} alt="" className="recurso-icon" />
+              <Reveal key={r.title} delay={i * 80} className="card recurso-card">
+                <img src={r.icon} alt="" className="recurso-icon" loading="lazy" />
                 <h3>{r.title}</h3>
                 <p>{r.desc}</p>
               </Reveal>

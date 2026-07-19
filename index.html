@@ -2,13 +2,75 @@
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      // Restores the real URL that 404.html encoded into a query string, before
+      // React Router mounts and reads the current path.
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&')
+            })
+            .join('?')
+          window.history.replaceState(null, '', l.pathname.slice(0, -1) + decoded + l.hash)
+        }
+      })(window.location)
+    </script>
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Grupo Mestres & Serviços: holding empresarial angolana com 35 anos de história, actuando em mineração, engenharia, petróleo & gás, e impacto social através da Fundação Isaías Trindade." />
+    <meta name="theme-color" content="#0a1830" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.grupomestres.com/" />
+
+    <meta name="description" content="Grupo Mestres & Serviços: holding empresarial angolana com 35 anos de história, actuando em engenharia, petróleo & gás, energia, agricultura, recursos minerais, e impacto social através da Fundação Isaías Trindade." />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Grupo Mestres & Serviços" />
+    <meta property="og:locale" content="pt_AO" />
+    <meta property="og:url" content="https://www.grupomestres.com/" />
+    <meta property="og:title" content="Grupo Mestres & Serviços" />
+    <meta property="og:description" content="Holding empresarial angolana com 35 anos de história, actuando em engenharia, petróleo & gás, energia, agricultura e recursos minerais." />
+    <meta property="og:image" content="https://www.grupomestres.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Grupo Mestres & Serviços" />
+    <meta name="twitter:description" content="Holding empresarial angolana com 35 anos de história, actuando em engenharia, petróleo & gás, energia, agricultura e recursos minerais." />
+    <meta name="twitter:image" content="https://www.grupomestres.com/og-image.jpg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
     <title>Grupo Mestres & Serviços</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Grupo Mestres & Serviços",
+        "alternateName": "Grupo Mestres",
+        "url": "https://www.grupomestres.com/",
+        "logo": "https://www.grupomestres.com/favicon.png",
+        "foundingDate": "1991",
+        "description": "Holding empresarial angolana com 35 anos de história, actuando em engenharia, petróleo & gás, energia, agricultura e recursos minerais.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Comandante Gika, 191, R/C, Alvalade",
+          "postalCode": "5944",
+          "addressLocality": "Luanda",
+          "addressCountry": "AO"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/grupo-mestres-servi%C3%A7os/"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -248,10 +248,6 @@
   display: flex;
   align-items: flex-start;
   gap: var(--space-4);
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  padding: var(--space-5);
 }
 
 .missao-item-icon {

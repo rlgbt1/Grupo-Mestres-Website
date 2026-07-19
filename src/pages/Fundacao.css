@@ -96,13 +96,6 @@
   gap: var(--space-5);
 }
 
-.pilar-fundacao-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  padding: var(--space-5);
-}
-
 .pilar-fundacao-icon {
   color: var(--petrol-700);
   margin-bottom: var(--space-3);

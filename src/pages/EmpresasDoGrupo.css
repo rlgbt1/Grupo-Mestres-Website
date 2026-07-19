@@ -72,13 +72,6 @@
   gap: var(--space-5);
 }
 
-.recurso-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  padding: var(--space-5);
-}
-
 .recurso-icon {
   width: 32px;
   height: 32px;

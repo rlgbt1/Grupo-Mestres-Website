@@ -2,6 +2,7 @@ import { GraduationCap, FirstAidKit, MusicNotes, Leaf, HandHeart, Palette, Arrow
 import PageHero from '../components/PageHero'
 import Reveal from '../components/Reveal'
 import { useLanguage } from '../i18n/LanguageContext'
+import { usePageMeta } from '../hooks/usePageMeta'
 import fundacaoLogo from '../assets/logos/fundacao-logo-hd.png'
 import artCollection01 from '../assets/images/fundacao-art-collection-01.jpg'
 import artCollection02 from '../assets/images/fundacao-art-collection-02.jpg'
@@ -85,6 +86,7 @@ const copy = {
 export default function Fundacao() {
   const { lang } = useLanguage()
   const t = copy[lang]
+  usePageMeta(t.title, t.intro)
 
   return (
     <>
@@ -132,7 +134,7 @@ export default function Fundacao() {
           </Reveal>
           <div className="pilares-fundacao-grid">
             {t.pillars.map((p, i) => (
-              <Reveal key={p.title} delay={i * 80} className="pilar-fundacao-card">
+              <Reveal key={p.title} delay={i * 80} className="card pilar-fundacao-card">
                 <p.icon size={26} weight="light" className="pilar-fundacao-icon" />
                 <h3>{p.title}</h3>
                 <p>{p.desc}</p>

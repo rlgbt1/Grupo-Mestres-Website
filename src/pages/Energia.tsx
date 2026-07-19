@@ -2,6 +2,7 @@ import { Lightning } from '@phosphor-icons/react'
 import PageHero from '../components/PageHero'
 import Reveal from '../components/Reveal'
 import { useLanguage } from '../i18n/LanguageContext'
+import { usePageMeta } from '../hooks/usePageMeta'
 import energyTowers from '../assets/images/energy-towers.jpg'
 import './AreaOverview.css'
 
@@ -29,6 +30,7 @@ const copy = {
 export default function Energia() {
   const { lang } = useLanguage()
   const t = copy[lang]
+  usePageMeta(t.title, t.intro)
 
   return (
     <>
@@ -39,7 +41,7 @@ export default function Energia() {
       <section className="section">
         <div className="container area-overview-intro">
           <Reveal as="div" className="area-overview-media">
-            <img src={energyTowers} alt={t.imageAlt} />
+            <img src={energyTowers} alt={t.imageAlt} loading="lazy" />
           </Reveal>
           <Reveal as="div" delay={100} className="area-overview-body">
             <Lightning size={28} weight="light" className="rep-corp-icon" />

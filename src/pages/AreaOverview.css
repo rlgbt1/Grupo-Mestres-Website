@@ -70,11 +70,8 @@
 }
 
 .projecto-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
   border-left: 3px solid var(--gold-500);
   border-radius: var(--radius-sm);
-  padding: var(--space-5);
 }
 
 .projecto-card h3 {
@@ -96,13 +93,6 @@
 .frentes-grid-single {
   grid-template-columns: 1fr;
   max-width: 560px;
-}
-
-.frente-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  padding: var(--space-5);
 }
 
 .frente-icon {

@@ -2,6 +2,7 @@ import { Handshake } from '@phosphor-icons/react'
 import PageHero from '../components/PageHero'
 import Reveal from '../components/Reveal'
 import { useLanguage } from '../i18n/LanguageContext'
+import { usePageMeta } from '../hooks/usePageMeta'
 import oilgas from '../assets/images/oilgas.jpg'
 import refineryNight from '../assets/images/refinery-night.jpg'
 import './AreaOverview.css'
@@ -40,6 +41,7 @@ const copy = {
 export default function PetroleoGas() {
   const { lang } = useLanguage()
   const t = copy[lang]
+  usePageMeta(t.title, t.intro)
 
   return (
     <>
@@ -50,7 +52,7 @@ export default function PetroleoGas() {
       <section className="section">
         <div className="container area-overview-intro">
           <Reveal as="div" className="area-overview-media">
-            <img src={oilgas} alt={t.oilAlt} />
+            <img src={oilgas} alt={t.oilAlt} loading="lazy" />
           </Reveal>
           <Reveal as="div" delay={100} className="area-overview-body">
             <span className="eyebrow eyebrow-dark">{t.overview}</span>
@@ -67,7 +69,7 @@ export default function PetroleoGas() {
             <h2>{t.partnerships}</h2>
           </Reveal>
           <div className="frentes-grid frentes-grid-single">
-            <Reveal className="frente-card">
+            <Reveal className="card frente-card">
               <Handshake size={26} weight="light" className="frente-icon" />
               <h3>{t.cardTitle}</h3>
               <p>{t.cardBody}</p>
@@ -79,7 +81,7 @@ export default function PetroleoGas() {
       <section className="section">
         <div className="container">
           <Reveal as="div" className="area-overview-media area-overview-media-wide">
-            <img src={refineryNight} alt={t.refineryAlt} />
+            <img src={refineryNight} alt={t.refineryAlt} loading="lazy" />
           </Reveal>
         </div>
       </section>

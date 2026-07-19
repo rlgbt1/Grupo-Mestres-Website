@@ -2,6 +2,7 @@ import { TrainSimple } from '@phosphor-icons/react'
 import PageHero from '../components/PageHero'
 import Reveal from '../components/Reveal'
 import { useLanguage } from '../i18n/LanguageContext'
+import { usePageMeta } from '../hooks/usePageMeta'
 import construction from '../assets/images/engineering-construction-site.jpg'
 import emdLogo from '../assets/logos/emd-division-logo.webp'
 import './AreaOverview.css'
@@ -56,6 +57,7 @@ const copy = {
 export default function EngenhariaConstrucao() {
   const { lang } = useLanguage()
   const t = copy[lang]
+  usePageMeta(t.title, t.intro)
 
   return (
     <>
@@ -66,7 +68,7 @@ export default function EngenhariaConstrucao() {
       <section className="section">
         <div className="container area-overview-intro">
           <Reveal as="div" className="area-overview-media">
-            <img src={construction} alt={t.constructionAlt} />
+            <img src={construction} alt={t.constructionAlt} loading="lazy" />
           </Reveal>
           <Reveal as="div" delay={100} className="area-overview-body">
             <span className="eyebrow eyebrow-dark">{t.overview}</span>
@@ -84,7 +86,7 @@ export default function EngenhariaConstrucao() {
           </Reveal>
           <div className="projectos-grid">
             {t.projects.map((p, i) => (
-              <Reveal key={p.title} delay={i * 80} className="projecto-card">
+              <Reveal key={p.title} delay={i * 80} className="card projecto-card">
                 <h3>{p.title}</h3>
                 <p>{p.desc}</p>
               </Reveal>
@@ -96,7 +98,7 @@ export default function EngenhariaConstrucao() {
       <section className="section">
         <div className="container area-overview-intro">
           <Reveal as="div" className="area-overview-media emd-logo-panel">
-            <img src={emdLogo} alt={t.emdAlt} />
+            <img src={emdLogo} alt={t.emdAlt} loading="lazy" />
           </Reveal>
           <Reveal as="div" delay={100} className="area-overview-body">
             <TrainSimple size={28} weight="light" className="rep-corp-icon" />

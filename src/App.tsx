@@ -1,5 +1,5 @@
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect, useRef } from 'react'
 import { LanguageProvider } from './i18n/LanguageContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -17,11 +17,21 @@ import Energia from './pages/Energia'
 // import Governanca from './pages/Governanca'
 import Fundacao from './pages/Fundacao'
 import Contactos from './pages/Contactos'
+import NotFound from './pages/NotFound'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
+  const isFirstRender = useRef(true)
   useEffect(() => {
     window.scrollTo(0, 0)
+    // Skip focus-management on the very first mount so the initial Tab press
+    // reaches the skip link, not #main-content — only move focus on actual
+    // client-side route changes, where there's no page reload to reset it.
+    if (isFirstRender.current) {
+      isFirstRender.current = false
+      return
+    }
+    document.getElementById('main-content')?.focus({ preventScroll: true })
   }, [pathname])
   return null
 }
@@ -29,10 +39,11 @@ function ScrollToTop() {
 function App() {
   return (
     <LanguageProvider>
-      <HashRouter>
+      <BrowserRouter>
+        <a href="#main-content" className="skip-link">Saltar para o conteúdo principal / Skip to main content</a>
         <ScrollToTop />
         <Navbar />
-        <main>
+        <main id="main-content" tabIndex={-1}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sobre-nos" element={<SobreNos />} />
@@ -47,10 +58,11 @@ function App() {
             {/* <Route path="/governanca" element={<Governanca />} /> */}
             <Route path="/fundacao-isaias-trindade" element={<Fundacao />} />
             <Route path="/contactos" element={<Contactos />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
-      </HashRouter>
+      </BrowserRouter>
     </LanguageProvider>
   )
 }

@@ -3,6 +3,7 @@ import { EnvelopeSimple, MapPin, LinkedinLogo } from '@phosphor-icons/react'
 import PageHero from '../components/PageHero'
 import Reveal from '../components/Reveal'
 import { useLanguage } from '../i18n/LanguageContext'
+import { usePageMeta } from '../hooks/usePageMeta'
 import './Contactos.css'
 
 const copy = {
@@ -43,6 +44,7 @@ const copy = {
 export default function Contactos() {
   const { lang } = useLanguage()
   const t = copy[lang]
+  usePageMeta(t.title, t.intro)
   const [form, setForm] = useState({ nome: '', email: '', assunto: '', mensagem: '' })
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'fallback' | 'error'>('idle')
 

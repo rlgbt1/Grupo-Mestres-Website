@@ -2,6 +2,7 @@ import { Cow, Carrot, MapPin } from '@phosphor-icons/react'
 import PageHero from '../components/PageHero'
 import Reveal from '../components/Reveal'
 import { useLanguage } from '../i18n/LanguageContext'
+import { usePageMeta } from '../hooks/usePageMeta'
 import agroSoil from '../assets/images/agro-soil.jpg'
 import agroAerial from '../assets/images/agro-aerial.jpg'
 import './AreaOverview.css'
@@ -46,6 +47,7 @@ const copy = {
 export default function Agricola() {
   const { lang } = useLanguage()
   const t = copy[lang]
+  usePageMeta(t.title, t.intro)
 
   return (
     <>
@@ -56,7 +58,7 @@ export default function Agricola() {
       <section className="section">
         <div className="container area-overview-intro">
           <Reveal as="div" className="area-overview-media">
-            <img src={agroSoil} alt={t.soilAlt} />
+            <img src={agroSoil} alt={t.soilAlt} loading="lazy" />
           </Reveal>
           <Reveal as="div" delay={100} className="area-overview-body">
             <span className="eyebrow eyebrow-dark">{t.overview}</span>
@@ -77,7 +79,7 @@ export default function Agricola() {
           </Reveal>
           <div className="frentes-grid">
             {t.items.map((p, i) => (
-              <Reveal key={p.title} delay={i * 80} className="frente-card">
+              <Reveal key={p.title} delay={i * 80} className="card frente-card">
                 <p.icon size={26} weight="light" className="frente-icon" />
                 <h3>{p.title}</h3>
                 <p>{p.desc}</p>
@@ -90,7 +92,7 @@ export default function Agricola() {
       <section className="section">
         <div className="container">
           <Reveal as="div" className="area-overview-media area-overview-media-wide">
-            <img src={agroAerial} alt={t.aerialAlt} />
+            <img src={agroAerial} alt={t.aerialAlt} loading="lazy" />
           </Reveal>
         </div>
       </section>

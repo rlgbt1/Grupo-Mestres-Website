@@ -57,7 +57,7 @@
 
 .navbar-link:hover,
 .navbar-link.active {
-  color: #ffffff;
+  color: var(--paper);
 }
 
 .navbar-link-fundacao {
@@ -233,7 +233,7 @@
   display: none;
   background: none;
   border: none;
-  color: #ffffff;
+  color: var(--paper);
   cursor: pointer;
   padding: 4px;
 }
@@ -244,8 +244,8 @@
   }
 
   .navbar-nav {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 86px;
     left: 0;
     right: 0;
     z-index: 45;
@@ -335,6 +335,7 @@
   }
 
   .navbar-nav {
+    top: 78px;
     height: calc(100dvh - 78px);
   }
 }
