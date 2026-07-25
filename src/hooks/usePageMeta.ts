@@ -1,6 +1,12 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void
+  }
+}
+
 export const SITE_NAME = 'Grupo Mestres & Serviços'
 const SITE_URL = 'https://www.grupomestres.com'
 
@@ -39,5 +45,13 @@ export function usePageMeta(title: string, description: string, options: PageMet
     setMetaContent('meta[property="og:url"]', canonicalUrl)
     const canonicalEl = document.querySelector('link[rel="canonical"]')
     if (canonicalEl) canonicalEl.setAttribute('href', canonicalUrl)
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'page_view', {
+        page_title: finalTitle,
+        page_location: canonicalUrl,
+        page_path: pathname,
+      })
+    }
   }, [title, description, isHome, noIndex, pathname])
 }
