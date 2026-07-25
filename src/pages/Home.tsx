@@ -19,7 +19,7 @@ const copy = {
     eyebrowHero: '35 Anos a Construir Angola',
     heroTitle: 'Um Grupo Empresarial Angolano com Actuação em Sectores Estratégicos da Economia Nacional.',
     heroSubtitle:
-      'Com experiência nas áreas da engenharia, petróleo & gás, energia, agricultura e recursos minerais, o Grupo Mestres desenvolve empresas, projectos e soluções que contribuem para o crescimento económico sustentável de Angola.',
+      'Com Experiência nas Áreas da Engenharia, Petróleo & Gás, Energia, Agricultura e Recursos Minerais, o Grupo Mestres desenvolve Empresas, Projectos e Soluções que Contribuem para o Crescimento Económico Sustentável de Angola.',
     ctaPrimary: 'Conhecer o Grupo',
     ctaSecondary: 'Contacte-nos',
     empresaEyebrow: 'Empresa do Grupo',
@@ -55,9 +55,9 @@ const copy = {
       { to: '/areas-de-negocio/energia', label: 'Energia', desc: 'Infraestrutura energética e complexos industriais em desenvolvimento para o futuro de Angola.', image: energyTowers },
     ],
     pilares: [
-      { icon: TrendUp, title: 'Excelência Técnica', desc: 'Rigor de execução em cada projecto, do primeiro estudo à entrega.' },
-      { icon: HandHeart, title: 'Responsabilidade Social', desc: 'Impacto humano real através da Fundação Isaías Trindade.' },
-      { icon: Target, title: 'Visão de Longo Prazo', desc: 'Estrutura pensada para escalar, não para o próximo trimestre.' },
+      { icon: TrendUp, title: 'Excelência Técnica', desc: 'Soluções sustentadas por experiência, rigor e compromisso com a qualidade.' },
+      { icon: HandHeart, title: 'Responsabilidade Social', desc: 'Promovemos desenvolvimento social e comunitário para além dos nossos negócios.' },
+      { icon: Target, title: 'Visão de Longo Prazo', desc: 'Investimos em projectos e oportunidades que geram valor duradouro.' },
     ],
   },
   en: {

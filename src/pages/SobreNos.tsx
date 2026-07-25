@@ -16,7 +16,7 @@ const copy = {
     historiaEyebrow: 'Nossa História',
     historiaTitle: 'De Projecto Técnico a Holding Empresarial',
     historiaP1: 'O Grupo Mestres & Serviços nasceu em 1991, pela mão do Eng. Reinaldo Trindade, como um projecto dedicado a serviços técnicos especializados. Ao longo de mais de três décadas, consolidou-se como agente activo no fortalecimento do sector privado angolano, participando na modernização de infraestruturas e na dinamização da economia nacional.',
-    historiaP2: 'Hoje o Grupo atravessa uma nova fase: um reposicionamento estratégico que o transforma numa holding empresarial moderna, organizada em torno de sectores-chave da economia angolana e de uma fundação social própria. Actuamos como o parceiro local de confiança para investidores estrangeiros e empresas estratégicas que procuram operar em Angola, com acesso a concessões, uma rede de parcerias de décadas e capacidade de execução no terreno.',
+    historiaP2: 'Hoje o Grupo atravessa uma nova fase: um reposicionamento estratégico que o transforma num grupo empresarial moderno, organizado em torno de sectores-chave da economia angolana e de uma fundação social própria. Actuamos como o parceiro local de confiança para investidores estrangeiros e empresas estratégicas que procuram operar em Angola, com acesso a uma rede de parcerias de décadas e capacidade de execução no terreno.',
     fundacaoAno: '1991',
     fundacaoLegenda: 'Ano de Fundação, em Luanda',
     jornadaEyebrow: 'Nossa Trajectória',
