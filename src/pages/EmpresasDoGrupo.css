@@ -187,3 +187,36 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 560px) {
+  .mmr-brand-panel {
+    min-height: 200px;
+    padding: var(--space-5);
+  }
+
+  .recursos-grid {
+    gap: var(--space-3);
+  }
+
+  .recurso-card {
+    padding: var(--space-4);
+  }
+
+  .recurso-icon {
+    width: 26px;
+    height: 26px;
+    margin-bottom: var(--space-2);
+  }
+
+  .recurso-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .recurso-card p {
+    font-size: 12.5px;
+  }
+
+  .minerais-criticos-card {
+    padding: var(--space-4);
+  }
+}

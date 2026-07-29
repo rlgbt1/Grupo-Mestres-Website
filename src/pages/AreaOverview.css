@@ -119,4 +119,8 @@
   .frentes-grid {
     grid-template-columns: 1fr;
   }
+
+  .emd-logo-panel {
+    min-height: 240px;
+  }
 }

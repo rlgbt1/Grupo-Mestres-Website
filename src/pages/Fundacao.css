@@ -162,6 +162,39 @@
   color: var(--petrol-700);
 }
 
+.mwana-poster {
+  display: block;
+  max-width: 420px;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  box-shadow: 0 26px 54px -34px rgba(10, 24, 48, 0.5);
+  transition: transform 220ms var(--ease-out), box-shadow 220ms var(--ease-out);
+}
+
+.mwana-poster:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px -28px rgba(10, 24, 48, 0.55);
+}
+
+.mwana-poster img {
+  width: 100%;
+  border-radius: calc(var(--radius-md) - 4px);
+}
+
+.mwana-poster-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: var(--space-3);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--petrol-700);
+}
+
 .fundacao-links {
   display: flex;
   flex-direction: column;

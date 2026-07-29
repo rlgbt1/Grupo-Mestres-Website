@@ -14,7 +14,7 @@ const copy = {
     imageAlt: 'Infraestrutura de transporte de energia',
     overview: 'Visão Geral',
     heading: 'Infraestrutura para o Futuro Energético de Angola',
-    body: 'O Grupo Mestres está a desenvolver um complexo industrial e infraestrutura energética, numa frente que acompanha as prioridades nacionais de diversificação da matriz energética. Dada a fase actual do projecto, os detalhes técnicos e de localização serão divulgados progressivamente.',
+    body: 'O Grupo Mestres está a desenvolver um complexo industrial e infraestrutura energética, reforçando a sua presença no sector da energia e contribuindo para a diversificação da matriz energética. O projecto integra a visão de longo prazo do Grupo para o desenvolvimento de soluções industriais sustentáveis em Angola.',
   },
   en: {
     eyebrow: 'Business Area',
@@ -23,7 +23,7 @@ const copy = {
     imageAlt: 'Energy transmission infrastructure',
     overview: 'Overview',
     heading: 'Infrastructure for Angola’s Energy Future',
-    body: 'Grupo Mestres is developing an industrial complex and energy infrastructure, a front aligned with national priorities for diversifying the energy matrix. Given the current project stage, technical and location details will be disclosed progressively.',
+    body: 'Grupo Mestres is developing an industrial complex and energy infrastructure, reinforcing its presence in the energy sector and contributing to the diversification of the energy matrix. The project reflects the Group’s long-term vision for developing sustainable industrial solutions in Angola.',
   },
 }
 

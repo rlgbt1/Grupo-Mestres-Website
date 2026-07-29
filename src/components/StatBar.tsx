@@ -4,14 +4,14 @@ import './StatBar.css'
 const stats = {
   pt: [
     { value: '35', suffix: ' anos', label: 'de experiência' },
-    { value: '30', suffix: '+', label: 'projectos desenvolvidos' },
-    { value: '50', suffix: '+', label: 'parcerias na indústria' },
-    { value: '100', suffix: '%', label: 'capital angolano' },
+    { value: 'Diversos', suffix: '', label: 'projectos executados' },
+    { value: 'Excelência', suffix: '', label: 'técnica' },
+    { value: '100', suffix: '%', label: 'angolana' },
   ],
   en: [
     { value: '35', suffix: ' years', label: 'of experience' },
-    { value: '30', suffix: '+', label: 'projects delivered' },
-    { value: '50', suffix: '+', label: 'industry partnerships' },
+    { value: 'Multiple', suffix: '', label: 'projects delivered' },
+    { value: 'Technical', suffix: '', label: 'excellence' },
     { value: '100', suffix: '%', label: 'angolan-owned' },
   ],
 }

@@ -6,6 +6,7 @@ import { usePageMeta } from '../hooks/usePageMeta'
 import fundacaoLogo from '../assets/logos/fundacao-logo-hd.png'
 import artCollection01 from '../assets/images/fundacao-art-collection-01.jpg'
 import artCollection02 from '../assets/images/fundacao-art-collection-02.jpg'
+import mwanaPoster from '../assets/images/mwana-africa-poster.jpg'
 import './Fundacao.css'
 
 const copy = {
@@ -33,6 +34,10 @@ const copy = {
     videoLink: 'Ver Vídeo no Facebook',
     palaceLink: 'Ler Sobre o Palácio de Ferro em Visit Luanda',
     mwanaLink: 'A Fundação é Patrocinadora Oficial do Projecto Mwana África',
+    mwanaEyebrow: 'Projecto Mwana África',
+    mwanaTitle: 'Apoio ao Lançamento do Livro «(...) Por Exemplo»',
+    mwanaPosterAlt: 'Cartaz de apresentação do livro «(...) Por Exemplo — O Que a História Ainda Não Contou», do Projecto Mwana África, com o apoio da Fundação Isaías Trindade',
+    mwanaPosterLink: 'Visitar mwanafrika.com',
     pillars: [
       { icon: GraduationCap, title: 'Educação', desc: 'Apoio a projectos de educação, formação técnica e capacitação juvenil.' },
       { icon: FirstAidKit, title: 'Saúde', desc: 'Promoção da saúde comunitária em zonas rurais de Angola.' },
@@ -69,6 +74,10 @@ const copy = {
     videoLink: 'Watch Video on Facebook',
     palaceLink: 'Read About Palácio de Ferro on Visit Luanda',
     mwanaLink: 'The Foundation is an Official Sponsor of the Mwana África Project',
+    mwanaEyebrow: 'Mwana África Project',
+    mwanaTitle: 'Supporting the Launch of «(...) Por Exemplo»',
+    mwanaPosterAlt: 'Announcement poster for the book «(...) Por Exemplo — O Que a História Ainda Não Contou», presented by the Mwana África Project with support from the Isaías Trindade Foundation',
+    mwanaPosterLink: 'Visit mwanafrika.com',
     pillars: [
       { icon: GraduationCap, title: 'Education', desc: 'Support for education, technical training and youth empowerment projects.' },
       { icon: FirstAidKit, title: 'Health', desc: 'Promotion of community health in rural areas of Angola.' },
@@ -208,6 +217,29 @@ export default function Fundacao() {
             >
               {t.mwanaLink} <ArrowSquareOut size={15} weight="bold" />
             </a>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <Reveal className="section-heading">
+            <span className="eyebrow eyebrow-dark">{t.mwanaEyebrow}</span>
+            <h2>{t.mwanaTitle}</h2>
+          </Reveal>
+          <Reveal
+            as="a"
+            href="https://mwanafrika.com/sobre-nos/"
+            target="_blank"
+            rel="noopener noreferrer"
+            delay={90}
+            className="mwana-poster"
+            aria-label={t.mwanaPosterAlt}
+          >
+            <img src={mwanaPoster} alt="" loading="lazy" />
+            <span className="mwana-poster-link">
+              {t.mwanaPosterLink} <ArrowSquareOut size={15} weight="bold" />
+            </span>
           </Reveal>
         </div>
       </section>

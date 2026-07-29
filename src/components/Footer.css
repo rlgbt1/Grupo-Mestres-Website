@@ -106,6 +106,11 @@
     width: 156px;
   }
 
+  .footer-social {
+    width: 44px;
+    height: 44px;
+  }
+
   .footer-bottom {
     flex-direction: column;
     gap: var(--space-2);

@@ -54,7 +54,7 @@
 }
 
 .areas-index-body h2 {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 1rem + 1.5vw, 1.5rem);
   margin: var(--space-3) 0;
 }
 
@@ -106,5 +106,20 @@
 
   .areas-index-body {
     padding: var(--space-5);
+  }
+}
+
+@media (max-width: 560px) {
+  .areas-index-media {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .areas-index-body {
+    padding: var(--space-4);
+  }
+
+  .areas-index-body p {
+    font-size: 14.5px;
   }
 }

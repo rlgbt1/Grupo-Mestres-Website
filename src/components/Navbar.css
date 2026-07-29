@@ -241,6 +241,16 @@
 @media (max-width: 1180px) {
   .navbar-toggle {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .navbar-lang-trigger {
+    padding: 11px;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .navbar-nav {
