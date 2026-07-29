@@ -17,7 +17,7 @@ import './Home.css'
 const copy = {
   pt: {
     eyebrowHero: '35 Anos a Construir Angola',
-    heroTitle: 'Um Grupo Empresarial Angolano com Actuação em Sectores Estratégicos da Economia Nacional.',
+    heroTitle: 'Grupo Empresarial Angolano com Actuação em Sectores Estratégicos da Economia Nacional.',
     heroSubtitle:
       'Com Experiência nas Áreas da Engenharia, Petróleo & Gás, Energia, Agricultura e Recursos Minerais, o Grupo Mestres desenvolve Empresas, Projectos e Soluções que Contribuem para o Crescimento Económico Sustentável de Angola.',
     ctaPrimary: 'Conhecer o Grupo',

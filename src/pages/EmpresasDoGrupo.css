@@ -190,8 +190,12 @@
 
 @media (max-width: 560px) {
   .mmr-brand-panel {
-    min-height: 200px;
-    padding: var(--space-5);
+    min-height: 0;
+    padding: var(--space-4);
+  }
+
+  .mmr-brand-mark {
+    width: min(52vw, 190px);
   }
 
   .recursos-grid {

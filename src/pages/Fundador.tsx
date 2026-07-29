@@ -14,7 +14,7 @@ const copy = {
     subtitle: 'Fundador & CEO do Grupo Mestres & Serviços',
     back: 'Voltar a Sobre Nós',
     p1: 'Com mais de 35 anos de actuação ao serviço do desenvolvimento económico, social e institucional de Angola, o Eng. Reinaldo Trindade fundou o Grupo Mestres & Serviços em 1991, dando início a uma trajectória empresarial diversificada que hoje se estende à engenharia, energia, agricultura e recursos minerais.',
-    p2: 'Para além do Grupo Mestres, integra a liderança de outras empresas angolanas, incluindo a Angola Fire & Safety (SAF3), na área de segurança industrial, a Trans Hex Angola, no sector diamantífero, e a Harmonia Seguros, uma seguradora co-fundada em 2024.',
+    p2: 'Para além do Grupo Mestres, integra a liderança de outras empresas angolanas, incluindo a Angola Fire & Safety (SAF3), na área de segurança industrial, e a Harmonia Seguros, uma seguradora co-fundada em 2024.',
     cargosTitle: 'Posições Institucionais',
     cargos: [
       'Presidente da Fundação Isaías Trindade, desde 2016',
@@ -36,7 +36,7 @@ const copy = {
     subtitle: 'Founder & Chairman of Grupo Mestres & Serviços',
     back: 'Back to About Us',
     p1: 'With more than 35 years serving Angola’s economic, social and institutional development, Eng. Reinaldo Trindade founded Grupo Mestres & Serviços in 1991, launching a diversified business trajectory that today spans engineering, energy, agriculture and mineral resources.',
-    p2: 'Beyond Grupo Mestres, he sits on the leadership of other Angolan companies, including Angola Fire & Safety (SAF3), in industrial safety, Trans Hex Angola, in the diamond sector, and Harmonia Seguros, an insurer co-founded in 2024.',
+    p2: 'Beyond Grupo Mestres, he sits on the leadership of other Angolan companies, including Angola Fire & Safety (SAF3), in industrial safety, and Harmonia Seguros, an insurer co-founded in 2024.',
     cargosTitle: 'Institutional Positions',
     cargos: [
       'Chairman of the Isaías Trindade Foundation, since 2016',
