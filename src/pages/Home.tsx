@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Buildings, Target, HandHeart, TrendUp, Quotes } from '@phosphor-icons/react'
 import Reveal from '../components/Reveal'
 import StatBar from '../components/StatBar'
+import ContainerTextFlip from '../components/ContainerTextFlip'
 import { useLanguage } from '../i18n/LanguageContext'
 import { usePageMeta, SITE_NAME } from '../hooks/usePageMeta'
 import construction from '../assets/images/construction.jpg'
@@ -17,7 +18,9 @@ import './Home.css'
 const copy = {
   pt: {
     eyebrowHero: '35 Anos a Construir Angola',
-    heroTitle: 'Grupo Empresarial Angolano com Actuação em Sectores Estratégicos da Economia Nacional.',
+    heroTitleLine1: 'Construindo Valor.',
+    heroTitleLine2: 'Impulsionando',
+    heroFlipWords: ['Desenvolvimento', 'Execução', 'Progresso', 'Infraestruturas', 'Futuro'],
     heroSubtitle:
       'Com Experiência nas Áreas da Engenharia, Petróleo & Gás, Energia, Agricultura e Recursos Minerais, o Grupo Mestres desenvolve Empresas, Projectos e Soluções que Contribuem para o Crescimento Económico Sustentável de Angola.',
     ctaPrimary: 'Conhecer o Grupo',
@@ -62,7 +65,9 @@ const copy = {
   },
   en: {
     eyebrowHero: '35 Years Building Angola',
-    heroTitle: 'An Angolan Business Group Operating Across Strategic Sectors of the National Economy.',
+    heroTitleLine1: 'Building Value.',
+    heroTitleLine2: 'Driving',
+    heroFlipWords: ['Development', 'Execution', 'Progress', 'Infrastructure', 'the Future'],
     heroSubtitle:
       'With experience across engineering, oil & gas, energy, agriculture and mineral resources, Grupo Mestres develops businesses, projects and solutions that contribute to Angola’s sustainable economic growth.',
     ctaPrimary: 'Discover the Group',
@@ -110,7 +115,7 @@ const copy = {
 export default function Home() {
   const { lang } = useLanguage()
   const t = copy[lang]
-  usePageMeta(`${SITE_NAME} — ${t.heroTitle}`, t.heroSubtitle, true)
+  usePageMeta(`${SITE_NAME} — ${t.heroTitleLine1} ${t.heroTitleLine2} ${t.heroFlipWords[0]}`, t.heroSubtitle, true)
 
   return (
     <>
@@ -122,7 +127,11 @@ export default function Home() {
         <div className="container hero-content">
           <Reveal className="eyebrow">{t.eyebrowHero}</Reveal>
           <Reveal as="h1" delay={80} className="hero-title">
-            {t.heroTitle}
+            {t.heroTitleLine1}
+            <span className="hero-title-line2">{t.heroTitleLine2}</span>
+            <span className="hero-title-flip-wrap">
+              <ContainerTextFlip words={t.heroFlipWords} />
+            </span>
           </Reveal>
           <Reveal delay={160} className="hero-subtitle">
             <p>{t.heroSubtitle}</p>
