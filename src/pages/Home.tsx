@@ -54,7 +54,7 @@ const copy = {
       { to: '/areas-de-negocio/engenharia-construcao-civil', label: 'Engenharia & Construção Civil', desc: 'Infraestruturas públicas e privadas, projectos industriais, pontes e representações corporativas em Angola.', image: engineeringConstruction },
       { to: '/areas-de-negocio/petroleo-gas', label: 'Petróleo & Gás', desc: 'Parcerias estratégicas com operadores offshore e apoio ao sector petrolífero angolano.', image: oilgas },
       { to: '/areas-de-negocio/mineracao', label: 'Mineração', desc: 'Concessões e exploração de ouro, diamantes, calcário e quartzo, conduzidas pela Mestres Mineral Resources.', image: mining },
-      { to: '/areas-de-negocio/agricola', label: 'Agrícola', desc: 'Criação de gado e produção hortícola na Fazenda Ebbanus Britus, em Icolo e Bengo.', image: agroSoil },
+      { to: '/areas-de-negocio/agricola', label: 'Agrícola', desc: 'Criação de gado e produção hortícola na Fazenda Mestres & Serviços, em Icolo e Bengo.', image: agroSoil },
       { to: '/areas-de-negocio/energia', label: 'Energia', desc: 'Infraestrutura energética e complexos industriais em desenvolvimento para o futuro de Angola.', image: energyTowers },
     ],
     pilares: [
@@ -101,7 +101,7 @@ const copy = {
       { to: '/areas-de-negocio/engenharia-construcao-civil', label: 'Engineering & Civil Construction', desc: 'Public and private infrastructure, industrial projects, bridges and corporate representations in Angola.', image: engineeringConstruction },
       { to: '/areas-de-negocio/petroleo-gas', label: 'Oil & Gas', desc: 'Strategic partnerships with offshore operators and support to the Angolan oil sector.', image: oilgas },
       { to: '/areas-de-negocio/mineracao', label: 'Mining', desc: 'Concessions and exploration of gold, diamonds, limestone and quartz, run by Mestres Mineral Resources.', image: mining },
-      { to: '/areas-de-negocio/agricola', label: 'Agriculture', desc: 'Livestock farming and vegetable production at Fazenda Ebbanus Britus, in Icolo e Bengo.', image: agroSoil },
+      { to: '/areas-de-negocio/agricola', label: 'Agriculture', desc: 'Livestock farming and vegetable production at Fazenda Mestres & Serviços, in Icolo e Bengo.', image: agroSoil },
       { to: '/areas-de-negocio/energia', label: 'Energy', desc: 'Energy infrastructure and industrial complexes under development for Angola’s future.', image: energyTowers },
     ],
     pilares: [

@@ -7,7 +7,7 @@ import { usePageMeta } from '../hooks/usePageMeta'
 import construction from '../assets/images/engineering-construction-site.jpg'
 import oilgas from '../assets/images/oilgas.jpg'
 import mining from '../assets/images/mining.jpg'
-import agroSoil from '../assets/images/agro-soil.jpg'
+import agroCrop from '../assets/images/agro-crop.jpg'
 import energyTowers from '../assets/images/energy-towers.jpg'
 import './AreasNegocioIndex.css'
 
@@ -23,7 +23,7 @@ const copy = {
       { to: '/areas-de-negocio/engenharia-construcao-civil', tag: 'Área de Actuação', label: 'Engenharia & Construção Civil', desc: 'Portefólio activo de infraestruturas públicas e privadas, pontes, complexos residenciais, projectos industriais e representações corporativas.', image: construction },
       { to: '/areas-de-negocio/petroleo-gas', tag: 'Área de Actuação', label: 'Petróleo & Gás', desc: 'Parcerias estratégicas com operadores offshore e apoio ao sector petrolífero angolano.', image: oilgas },
       { to: '/areas-de-negocio/mineracao', tag: 'Ligada à Mestres Mineral Resources', label: 'Mineração', desc: 'Aquisição de concessões e exploração de ouro, diamantes, calcário e quartzo, conduzida pela empresa constituída do Grupo, a Mestres Mineral Resources.', image: mining },
-      { to: '/areas-de-negocio/agricola', tag: 'Área de Actuação', label: 'Agrícola', desc: 'Criação de gado e produção hortícola na Fazenda Ebbanus Britus, em Icolo e Bengo.', image: agroSoil },
+      { to: '/areas-de-negocio/agricola', tag: 'Área de Actuação', label: 'Agrícola', desc: 'Criação de gado e produção hortícola na Fazenda Mestres & Serviços, em Icolo e Bengo.', image: agroCrop },
       { to: '/areas-de-negocio/energia', tag: 'Área de Actuação', label: 'Energia', desc: 'Infraestrutura energética e complexos industriais em desenvolvimento para o futuro de Angola.', image: energyTowers },
     ],
   },
@@ -38,7 +38,7 @@ const copy = {
       { to: '/areas-de-negocio/engenharia-construcao-civil', tag: 'Business Area', label: 'Engineering & Civil Construction', desc: 'Active portfolio of public and private infrastructure, bridges, residential complexes, industrial projects and corporate representations.', image: construction },
       { to: '/areas-de-negocio/petroleo-gas', tag: 'Business Area', label: 'Oil & Gas', desc: 'Strategic partnerships with offshore operators and support to the Angolan oil sector.', image: oilgas },
       { to: '/areas-de-negocio/mineracao', tag: 'Linked to Mestres Mineral Resources', label: 'Mining', desc: 'Acquisition of concessions and exploration of gold, diamonds, limestone and quartz, led by the Group’s incorporated company, Mestres Mineral Resources.', image: mining },
-      { to: '/areas-de-negocio/agricola', tag: 'Business Area', label: 'Agriculture', desc: 'Livestock farming and vegetable production at Fazenda Ebbanus Britus, in Icolo e Bengo.', image: agroSoil },
+      { to: '/areas-de-negocio/agricola', tag: 'Business Area', label: 'Agriculture', desc: 'Livestock farming and vegetable production at Fazenda Mestres & Serviços, in Icolo e Bengo.', image: agroCrop },
       { to: '/areas-de-negocio/energia', tag: 'Business Area', label: 'Energy', desc: 'Energy infrastructure and industrial complexes under development for Angola’s future.', image: energyTowers },
     ],
   },
